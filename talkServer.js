@@ -6,13 +6,11 @@ wss = new wsServer({
 
 wss.on('connection',function(ws){
 	ws.on('message',function(message){
-		console.log(message);
-		if(message.indexOf('买')>-1){
-			ws.send('买你妹');
-		}
-		else{
-			ws.send('好的');
-		}
+		console.log(wss.clients.length + '个用户已经连接');
+		
+		wss.clients.forEach(function(client){
+			client.send(wss.clients.length + '个用户已经连接')
+		});
 		return false;
 	})
 });
