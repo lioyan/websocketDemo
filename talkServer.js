@@ -12,6 +12,9 @@ wss.on('connection',function(ws){
 			client.send(wss.clients.length + '个用户已经连接')
 		});
 		return false;
+	});
+	ws.on('close',function(message){//close事件，在关闭连接的时候做一些收尾操作
+		console.log(message);
 	})
 });
 
