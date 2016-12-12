@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script type="text/javascript">
+	var socket = new WebSocket('ws://localhost:8880');
+	socket.onopen = function(event){
+		console.log('已经连上 8880');
+		socket.send('大哥你好');
+	};
+</script>
+<body>
+	
+</body>
+</html>
