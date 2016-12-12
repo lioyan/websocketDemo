@@ -5,10 +5,14 @@
 
 使用ws(一个小巧的websocket库)构建
 
-#起步
-npm init
+服务端、客户端的ws交互方式：
 
-npm install ws -save
+*发送  *响应  *广播
+
+#起步
+>npm init
+
+>npm install ws -save
 
 #tips
 ws不能直接发送json
