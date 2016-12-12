@@ -9,3 +9,10 @@
 npm init
 
 npm install ws -save
+
+#tips
+ws不能直接发送json
+
+socket.send({}) 服务器端收到的是 [object Object]
+
+方法：JSON.stringify() 转成字符串 然后想干嘛就干嘛
