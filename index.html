@@ -9,6 +9,10 @@
 	socket.onopen = function(event){
 		console.log('已经连上 8880');
 		socket.send('大哥你好');
+		socket.onmessage = function(event){
+			console.log(event);
+			console.log(event.data);
+		}
 	};
 </script>
 <body>
