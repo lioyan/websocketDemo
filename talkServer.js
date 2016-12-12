@@ -5,7 +5,10 @@ wss = new wsServer({
 });
 
 wss.on('connection',function(ws){
-	console.log('有人连进来了')
+	ws.on('message',function(message){
+		console.log(message);
+		return false;
+	})
 });
 
 console.log(' 已经准备好监听 8880端口');
